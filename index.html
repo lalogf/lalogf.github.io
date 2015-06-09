@@ -32,18 +32,18 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav nav-justified">
-        <li><a class="navbarMenuItems" href="#">ABOUT</a></li>
-        <li><a class="navbarMenuItems" href="#">PROJECTS</a></li>
-        <li><a class="navbarMenuItems" href="#">EXPERIENCE</a></li>
-        <li><a class="navbarMenuItems" href="#">WIWO</a></li>
-        <li><a class="navbarMenuItems" href="#">BLOG</a></li>
-        <li><a class="navbarMenuItems" href="#">CONTACT ME</a></li>
+        <li><a class="navbarMenuItems" href="#about">ABOUT</a></li>
+        <li><a class="navbarMenuItems" href="/projects">PROJECTS</a></li>
+        <li><a class="navbarMenuItems" href="/experience">EXPERIENCE</a></li>
+        <li><a class="navbarMenuItems" href="/wiwo">WIWO</a></li>
+        <li><a class="navbarMenuItems" href="/blog">BLOG</a></li>
+        <li><a class="navbarMenuItems" href="/contact">CONTACT ME</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-	<div class="container content">
+	<div class="container content" id="container">
 		<div class="myTitle">
 			<h1>FULL STACK</h1>
 			<h1>WEB DEVELOPER</h1>
@@ -51,9 +51,27 @@
 		</div>
 	</div>
 
+<script id="about" type="x-handlebars-template">
+			<div class="row" >
+				<div class="col-md-4">
+					<div class="col-md-6">
+						<h3>Book info</h3>
+						<p>{{title}}</p>
+						<p>{{author}}</p>
+						<p>{{release_date}}</p>
+					</div>
+				</div>
+			</div>
+</script>
+
+
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://underscorejs.org/underscore-min.js"></script>
+	<script src="http://backbonejs.org/backbone-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="server.js"></script>
 </body>
 </html> 

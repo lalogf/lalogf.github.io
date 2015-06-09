@@ -1,3 +1,4 @@
+
 var ready = function () {
 	var trying = function (){
 		var color1 = "rgb(0, 0, 0)";
@@ -6,7 +7,6 @@ var ready = function () {
 			if(($(this).css("color")) === color1 ){
 				($(this)).css("color", color2);
 			} else {
-				console.log(($(this).css("color")));
 				($(this)).css("color", color1)
 			}
 		});
@@ -24,3 +24,4 @@ var ready = function () {
 
 $(document).ready(ready);
 $(document).on('page:load',ready);
+
