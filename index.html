@@ -32,24 +32,29 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav nav-justified">
+      	<li><a class="navbarMenuItems" href="#">HOME</a></li>
         <li><a class="navbarMenuItems" href="#about">ABOUT</a></li>
-        <li><a class="navbarMenuItems" href="/projects">PROJECTS</a></li>
-        <li><a class="navbarMenuItems" href="/experience">EXPERIENCE</a></li>
-        <li><a class="navbarMenuItems" href="/wiwo">WIWO</a></li>
-        <li><a class="navbarMenuItems" href="/blog">BLOG</a></li>
-        <li><a class="navbarMenuItems" href="/contact">CONTACT ME</a></li>
+        <li><a class="navbarMenuItems" href="#projects">PROJECTS</a></li>
+        <li><a class="navbarMenuItems" href="#experience">EXPERIENCE</a></li>
+        <li><a class="navbarMenuItems" href="#wiwo">WIWO</a></li>
+        <li><a class="navbarMenuItems" href="#blog">BLOG</a></li>
+        <li><a class="navbarMenuItems" href="#contact">CONTACT</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 	<div class="container content" id="container">
-		<div class="myTitle">
-			<h1>FULL STACK</h1>
-			<h1>WEB DEVELOPER</h1>
-			<h1>MARKETING</h1>
-		</div>
+
 	</div>
+
+<script id="index" type="x-handlebars-template">
+	<div class="myTitle">
+		<h1>{{full}}</h1>
+		<h1>{{dev}}</h1>
+		<h1>{{marketing}}</h1>
+	</div>
+</script>
 
 <script id="about" type="x-handlebars-template">
 			<div class="row" >
