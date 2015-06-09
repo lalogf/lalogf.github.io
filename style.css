@@ -1,10 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:900);
-@import url(http://fonts.googleapis.com/css?family=Lato:100);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900);
 
 body {
-    height: 800px;
+/*    height: 800px;*/
     background: 
     -webkit-linear-gradient(left, #6c878e 0%, #6dc9ca 50%, #96c768 100%);
+    font-family: 'Lato', sans-serif;
+    color:"white";
+    font-weight:100;
 }
 
 .myTitle{
@@ -20,24 +22,87 @@ h1{
 	text-align: center;
 	font-family: 'Lato', sans-serif;
 	color:white;
+	font-weight:100;
 }
 
-@media(min-width: 1000px){
+h2 {
+	font-family: 'Lato', sans-serif;
+	color:white;
+	font-size: 80px;
+	font-weight:100;
+	text-align: center;
+}
+
+h3 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	line-height: 200px;
+	font-size:40px;
+	color:white;
+	text-align: center;
+}
+
+p{
+	font-size: 20px
+}
+
+label {
+	font-size:20px;
+	font-weight:400;
+	margin-top: 10px;
+}
+
+.intro{
+	font-size: 30px;
+	font-weight: 300;
+	color:white;
+}
+
+.introText{
+		text-align: center;
+}
+
+.titleBox{
+	background-color: rgba(0, 0, 0, 0.7);
+	margin-bottom:5px;
+}
+
+.titleBox:hover{
+	background-color: rgba(231, 76, 60,0.7)
+}
+
+.contentBox{
+	background-color: rgba(255, 255, 255, 0.7);
+	height: 220px;
+}
+
+.Scrollable{
+	height: 300px;
+}
+/*@media(min-width: 1000px){
 	.navbar {
 		margin-bottom: 100px;
 	}
-}
+}*/
 @media (max-width: 1200px) {
 	h1{
 		font-size: 80px;
-		line-height: 80px;
+		line-height: 120px;
+	}
+
+	h3{
+		font-size: 20px;
+		line-height: 60px;
+	}
+
+	p {
+		font-size: 15px;
 	}
 	body{
 		height:600px;
 	}
-/*	.navbar {
-		margin-bottom: 0px;
-	}*/
+
+
 }
 
 @media (max-width:768px) {
@@ -52,29 +117,30 @@ h1{
 		margin: 0 auto;
 		float:none;
 	}
-/*	.navbar {
-		margin-bottom: 0px;
-	}*/
 }
 
+
+/*Navbar*/
 .navbar{
-/*	margin-bottom: 100px;*/
 	background:none;
 	border:none;
 	box-shadow: none;
 }
+
 a {
 	font-size: 25px;
 	font-family: 'Lato', sans-serif;
+	font-weight:100;
 }
+
 
 .navbarMenuItems{
 	color: rgb(0, 0, 0);
 }
-
 
 .navbar .nav li a:hover {
 	color:white !important;
 	text-shadow: none !important;
 	background-color: rgba(0, 0, 0, 0.7) !important;
 }
+

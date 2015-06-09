@@ -13,6 +13,12 @@ var blogTemplate;
 var contactSource;
 var contactTemplate;
 
+function resizeBoxes(){
+	var boxHeight = $(".titleBox").css("height");
+	$(".contentBox").css("height", boxHeight);
+}
+
+
 var Router = Backbone.Router.extend({
 	routes: {
 		"":"index",
@@ -57,33 +63,48 @@ function index () {
 
 function about (){
 	var content = aboutTemplate({
-		title: "Lalo",
-		author: "Gonzalez",
-		release_date: "Today"
-	});	
-	$("#container").html(content);	
+		title: "About",
+		intro: "I'm a Web Developer and Marketer, who enjoys building usable and enjoyable stuff for the Internet age. I like flat design. I enjoy online learning and I'm looking foward to start homebrewing.",
+		items: 
+		[{ 	title: "Web Developer",
+			text: "I can code in Ruby, Javascript, HTML and CSS. I experienced working with frameworks such as: Ruby on Rails, Nodejs, Sequelize, Express, Handlebars and Backbone. I normally use Postgresql as DB and Passport, Bcrypt or Devise for authentication. I have deployed to Heroku and AWS. I was trained at General Assembly in San Francisco, CA and I'm sharping my skills at Onemonth.edu."
+		},
+		{  title: "Marketing",
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+		}
+		]
+});	
+	$("#container").html(content);
+	$("#aboutButton").css("background-color", "yellow");
+	resizeBoxes();
 };
 
 function projects () {
 	var content = projectsTemplate({
+		title: "Projects",
 		project1: "Project1",
 		project2: "Project2"
 	});
 	$("#container").html(content);
+	$("#projectsButton").css("background-color", "yellow");
 }
 
 function experience () {
 	var content = experienceTemplate({
+		title: "Experience",
 		experience: "GA"
 	});
 	$("#container").html(content);
+	$("#experienceButton").css("background-color", "yellow");
 }
 
 function wiwo () {
 	var content = wiwoTemplate({
+		title: "What I'm Working on",
 		wiwo1: "This"
 	});
 	$("#container").html(content);
+	$("#wiwoButton").css("background-color", "yellow");
 }
 
 function blog () {
@@ -91,12 +112,15 @@ function blog () {
 		article: "Coming soon"
 	});
 	$("#container").html(content);
+	$("#blogButton").css("background-color", "yellow");
 }
 
 function contact () {
 	var content = contactTemplate({
+		title: "Contact"
 	});
 	$("#container").html(content);
+	$("#contactButton").css("background-color", "yellow");
 }
 
 router.on("route:index", index);

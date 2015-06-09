@@ -1,5 +1,11 @@
 
 var ready = function () {
+
+	$(".navbarMenuItems").click(function(){
+		$(".navbarMenuItems").css("background", "none");
+		$(this).css("background-color", "yellow");
+	});
+
 	var trying = function (){
 		var color1 = "rgb(0, 0, 0)";
 		var color2 = "rgb(255, 255, 255)";
@@ -19,6 +25,17 @@ var ready = function () {
 
 	changeColor();
 
+	function resizeBoxes(){
+		var boxHeight = $(".titleBox").css("height");
+		$(".contentBox").css("height", boxHeight);
+	}
+
+	resizeBoxes();
+
+	var theWindow = $(window);
+	theWindow.resize(function() {
+		resizeBoxes();
+	});	
 
 };
 
