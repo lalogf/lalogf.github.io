@@ -41,9 +41,12 @@ h1{
 		height:400px;
 	}
 	.navbar-nav{
-    margin: 0 auto;
-    float:none;
-}
+		margin: 0 auto;
+		float:none;
+	}
+	.navbar {
+		margin: 0px;
+	}
 }
 
 .navbar{
