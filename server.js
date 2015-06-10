@@ -67,7 +67,7 @@ function about (){
 		intro: "I'm a Web Developer and Marketer, who enjoys building usable and enjoyable stuff for the Internet age.",
 		items: 
 		[{ 	title: "Web Developer",
-			text: "I can code in Ruby, Javascript, HTML and CSS. I experienced working with frameworks such as: Ruby on Rails, Nodejs, Sequelize, Express, Handlebars and Backbone. I normally use Postgresql as DB and Passport, Bcrypt or Devise for authentication. I have deployed to Heroku and AWS. I was trained at General Assembly in San Francisco, CA and I'm sharping my skills at Onemonth.edu."
+			text: "I can code in Ruby, Javascript, HTML and CSS. I experienced working with frameworks such as: Ruby on Rails, Nodejs, Sequelize, Express, Handlebars and Backbone. I normally use Postgresql as DB and Passport/Bcrypt or Devise for authentication. I have deployed to Heroku and AWS. I was trained at General Assembly in San Francisco, CA and I'm sharping my skills at Onemonth.edu."
 		},
 		{  title: "Marketing",
 			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
@@ -81,9 +81,31 @@ function about (){
 
 function projects () {
 	var content = projectsTemplate({
-		title: "Projects",
-		project1: "Project1",
-		project2: "Project2"
+		experience: [
+		{
+			title: "Case Designer",
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+			liveapp: "http://www.spacioc.com",
+			github: "http://github.com/lalogf/casedesigner",
+			carouselClass: "item active",
+			image: "assets/PreviewCaseDesigner.png"
+		},
+		{
+			title: "Survival Guide",
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+			liveapp: "http://zombiesurvivalguide.herokuapp.com",
+			github: "http://github.com/lalogf/zombielist",
+			carouselClass: "item",
+			image: "assets/ZombieSurvivalGuide.png"
+		},
+		{
+			title: "Plan Compare",
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+			liveapp: "http://peru-compare.herokuapp.com",
+			github: "http://github.com/lalogf/plan",
+			carouselClass: "item",
+			image: "assets/PreviewPlanCompare.png"
+		}]
 	});
 	$("#container").html(content);
 	$("#projectsButton").css("background-color", "yellow");
@@ -91,8 +113,6 @@ function projects () {
 
 function experience () {
 	var content = experienceTemplate({
-		title: "Experience",
-		experience: "GA"
 	});
 	$("#container").html(content);
 	$("#experienceButton").css("background-color", "yellow");
