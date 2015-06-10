@@ -54,9 +54,9 @@ var router = new Router();
 
 function index () {
 	var content = indexTemplate({
-		full: "FULL STACK",
-		dev: "WEB DEVELOPER",
-		marketing: "MARKETING"
+		name: "LALO GONZALEZ",
+		title1: "WEB DEVELOPER",
+		title2: "MARKETING"
 	});	
 	$("#container").html(content);
 };
@@ -64,7 +64,7 @@ function index () {
 function about (){
 	var content = aboutTemplate({
 		title: "About",
-		intro: "I'm a Web Developer and Marketer, who enjoys building usable and enjoyable stuff for the Internet age. I like flat design. I enjoy online learning and I'm looking foward to start homebrewing.",
+		intro: "I'm a Web Developer and Marketer, who enjoys building usable and enjoyable stuff for the Internet age.",
 		items: 
 		[{ 	title: "Web Developer",
 			text: "I can code in Ruby, Javascript, HTML and CSS. I experienced working with frameworks such as: Ruby on Rails, Nodejs, Sequelize, Express, Handlebars and Backbone. I normally use Postgresql as DB and Passport, Bcrypt or Devise for authentication. I have deployed to Heroku and AWS. I was trained at General Assembly in San Francisco, CA and I'm sharping my skills at Onemonth.edu."

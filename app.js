@@ -6,10 +6,18 @@ var ready = function () {
 		$(this).css("background-color", "yellow");
 	});
 
-	var trying = function (){
+	var changeIcons = function() {
+		$(".outer-shape").hover(function(){
+		$(this).css("fill","rgb(0,0,0)")},function(){
+			$(this).css("fill","rgb(0,121,191)")
+		});
+	};
+	changeIcons();
+
+	var blinkColors = function (){
 		var color1 = "rgb(0, 0, 0)";
 		var color2 = "rgb(255, 255, 255)";
-		$("h1").each(function(){
+		$(".blinkTitle").each(function(){
 			if(($(this).css("color")) === color1 ){
 				($(this)).css("color", color2);
 			} else {
@@ -18,9 +26,8 @@ var ready = function () {
 		});
 	}
 
-	var nIntervId;
 	function changeColor() {
-		nIntervId = setInterval(trying, 3000);
+		setInterval(blinkColors, 2000);
 	}
 
 	changeColor();
@@ -36,7 +43,6 @@ var ready = function () {
 	theWindow.resize(function() {
 		resizeBoxes();
 	});	
-
 };
 
 $(document).ready(ready);
