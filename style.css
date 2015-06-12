@@ -7,6 +7,10 @@ body {
     font-weight:100;
 }
 
+
+.content{
+	margin:0 auto;
+}
 .myTitle{
 	padding-top: 100px;
 	display:block;
@@ -80,7 +84,7 @@ label {
 .contentBox{
 	background-color: rgba(255, 255, 255, 0.3);
 	padding: 20px;
-	height:200px;
+	height:230px;
 }
 
 .contentBox p {
@@ -187,24 +191,15 @@ h2.projectTitle{
 		margin:0 auto;
 	}
 	.myTitle{
-		display:block;
-		justify-content:center;
-		align-items:center;
+		padding-top: 20px;
 	}
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
 		border-bottom: solid 1px;
 		border-color: #e7e7e7;
 	}
 }
-/*
-@media (max-width:600px) {
-	.controls{
-		display:none;
-	} 
-	.carousel-inner>.item{
-		display:block;
-	}
-}*/
+
+
 
 
 /*Navbar*/

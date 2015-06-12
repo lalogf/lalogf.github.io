@@ -32,12 +32,12 @@ var ready = function () {
 
 	changeColor();
 
-	function resizeBoxes(){
-		var boxHeight = $(".titleBox").css("height");
-		$(".contentBox").css("height", boxHeight);
-	}
+	// function resizeBoxes(){
+	// 	var boxHeight = $(".titleBox").css("height");
+	// 	$(".contentBox").css("height", boxHeight);
+	// }
 
-	resizeBoxes();
+	// resizeBoxes();
 
 	hideControls = function () {
 		var theWindow = $(window);
