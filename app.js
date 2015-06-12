@@ -39,10 +39,20 @@ var ready = function () {
 
 	resizeBoxes();
 
-	var theWindow = $(window);
-	theWindow.resize(function() {
-		resizeBoxes();
-	});	
+	hideControls = function () {
+		var theWindow = $(window);
+		theWindow.resize(function() {
+			if (theWindow.innerWidth() < 600){
+				$(".controls").hide();
+			} else {
+				$(".controls").show();
+			}
+		});	
+	};
+
+	hideControls();
+
+
 };
 
 $(document).ready(ready);

@@ -81,7 +81,8 @@ label {
 */
 .contentBox{
 	background-color: rgba(255, 255, 255, 0.3);
-	height: 220px;
+	padding: 20px;
+	height:200px;
 }
 
 .contentBox p {
@@ -119,8 +120,7 @@ h2.projectTitle{
 }
 
 .carouselContainer{
-	padding-top: 100px;
-	margin: 0 50px 0 50px;
+	margin:50px auto;
 }
 
 .showButtonsBox{
@@ -155,10 +155,10 @@ h2.projectTitle{
 		line-height: 120px;
 	}
 
-	h3{
+/*	h3{
 		font-size: 20px;
 		line-height: 60px;
-	}
+	}*/
 
 	p {
 		font-size: 15px;
@@ -181,6 +181,15 @@ h2.projectTitle{
 	.navbar-nav{
 		margin: 0 auto;
 		float:none;
+	}
+}
+
+@media (max-width:600px) {
+	.controls{
+		display:none;
+	} 
+	.carousel-inner>.item{
+		display:block;
 	}
 }
 

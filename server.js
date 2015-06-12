@@ -1,3 +1,5 @@
+// require('app.js');
+
 var indexSource;
 var indexTemplate;
 var aboutSource;
@@ -67,12 +69,12 @@ function about (){
 		intro: "I'm a Web Developer and Marketer, who enjoys building usable and enjoyable stuff for the Internet age.",
 		items: 
 		[{ 	title: "Web Developer",
-			text: "I can code in Ruby, Javascript, HTML and CSS. I experienced working with frameworks such as: Ruby on Rails, Nodejs, Sequelize, Express, Handlebars and Backbone. I normally use Postgresql as DB and Passport/Bcrypt or Devise for authentication. I have deployed to Heroku and AWS. I was trained at General Assembly in San Francisco, CA and I'm sharping my skills at Onemonth.edu."
-		},
-		{  title: "Marketing",
-			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-		}
-		]
+		text: "I can code in Ruby, Javascript, HTML and CSS. I experienced working with frameworks such as: Ruby on Rails, Nodejs, Sequelize, Express, Handlebars and Backbone. I normally use Postgresql as DB and Passport/Bcrypt or Devise for authentication. I have deployed to Heroku and AWS. I was trained at General Assembly in San Francisco, CA and I'm sharping my skills at Onemonth.edu."
+	},
+	{  title: "Marketing",
+	text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+}
+]
 });	
 	$("#container").html(content);
 	$("#aboutButton").css("background-color", "yellow");
@@ -84,7 +86,7 @@ function projects () {
 		experience: [
 		{
 			title: "Case Designer",
-			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+			text: "Market place where a designer can upload his best designs and adapt them to phone cases, which later will be sold to final customers. Each designer has his own personalized store with an avatar and a quote. After sign up they can upload their designs and adapt them to different models of phone cases, including iPhone 6, iPhone 5/5s, Galaxy S5 and Moto G. Built with Ruby on Rails, using Paperclip and Fabric.js.",
 			liveapp: "http://www.spacioc.com",
 			github: "http://github.com/lalogf/casedesigner",
 			carouselClass: "item active",
@@ -92,7 +94,7 @@ function projects () {
 		},
 		{
 			title: "Survival Guide",
-			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+			text: "Site that gives user information about secure places to hide in the case of a Zombie attack. It also gives you options to buy survival kits. Built in Ruby on Rails, using MapBox and Foursquare APIs." ,
 			liveapp: "http://zombiesurvivalguide.herokuapp.com",
 			github: "http://github.com/lalogf/zombielist",
 			carouselClass: "item",
@@ -100,13 +102,22 @@ function projects () {
 		},
 		{
 			title: "Plan Compare",
-			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+			text: "Site that allows users to choose their best option when buying or renewing a smartphone. It compares plans based on prices, amount of data and SMS and minutes offered by the mobile carriers. Built in Node.js, using Sequelizejs, Expressjs, Passport and Bcrypt.",
 			liveapp: "http://peru-compare.herokuapp.com",
 			github: "http://github.com/lalogf/plan",
 			carouselClass: "item",
 			image: "assets/PreviewPlanCompare.png"
 		}]
 	});
+		hideControls = function () {
+			if ($(window).innerWidth() < 600){
+				$(".controls").hide();
+			} else {
+				$(".controls").show();
+			}
+		};	
+
+	hideControls();
 	$("#container").html(content);
 	$("#projectsButton").css("background-color", "yellow");
 }
@@ -142,6 +153,11 @@ function contact () {
 	$("#container").html(content);
 	$("#contactButton").css("background-color", "yellow");
 }
+
+
+
+
+
 
 router.on("route:index", index);
 router.on("route:about", about);

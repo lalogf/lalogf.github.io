@@ -102,19 +102,21 @@
 
 	<script id="projects" type="x-handlebars-template">
 		<div class="row carouselContainer">
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<div id="carousel-example-generic" class="carousel slide" data-interval="false" data-ride="carousel">
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					{{#each experience}}
 					<div class="{{carouselClass}}">
 						<div class="col-md-6">
 							<h2 class="projectTitle">{{title}}</h2>
+						</div>
+						<div class="col-md-6">
+							<img style="width:300px; text-align:center !important; padding:20px 0; margin: 0 auto" src="{{image}}" alt="{{title}}">
+						</div>
+					 	<div class="col-md-12">
 							<div class="contentBox">
 								<p>{{text}}</p>
 							</div>
-						</div>
-						<div class="col-md-6">
-							<img src="{{image}}" alt="...">
 						</div>
 
 						<div class="col-md-12 showButtonsBox">
@@ -127,12 +129,14 @@
 			</div>
 		</div>
 		<!-- Controls -->
+		<div class="controls">
 		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 			<span class="left"><</span>
 		</a>
 		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
 			<span class="right">></span>
 		</a>
+		</div>
 
 	</script>
 
