@@ -85,7 +85,7 @@ function projects () {
 		experience: [
 		{
 			title: "Phone Case Designer",
-			text: "Market place where a designer can upload his best designs and adapt them to phone cases, which later will be sold to final customers. Each designer has his own personalized store with an avatar and a quote. After sign up they can upload their designs and adapt them to different models of phone cases, including iPhone 6, iPhone 5/5s, Galaxy S5 and Moto G. Built with Ruby on Rails, using Paperclip and Fabric.js.",
+			text: "Market place where a designer can upload his best designs and adapt them to phone cases, which later will be sold to final customers. Each designer has his own personalized store with an avatar and a quote. After sign up they can upload their designs and adapt them to different models of phone cases, including iPhone 6, iPhone 5/5s, Galaxy S5 and Moto G. Built with Ruby on Rails, using Paperclip and Fabric.js for image uploading and canvas, Devise for authentication, Mandril API for emailing and deployed to AWS.",
 			liveapp: "http://www.spacioc.com",
 			github: "http://github.com/lalogf/casedesigner",
 			carouselClass: "item active",
