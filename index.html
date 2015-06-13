@@ -143,8 +143,12 @@
 
 	<script id="extras" type="x-handlebars-template">
 		<div class="row" >
-			<h2>{{title}}</h2>
-			<a data-toggle="modal" data-target="#videoModal" class="btn btn-default">Why I learned</a>
+			<h4 style="color:white">Why I learned to code?</h4>
+			<p style="font-weight:300">VIDEO: Crash course in digital literacy. By Mattan Griffel. <a data-toggle="modal" data-target="#videoModal">Watch video</a></p>
+			<p style="font-weight:300">BLOG: Why founders should know how to code. By Steve Blank. <a href="http://steveblank.com/2014/09/03/should-founders-know-how-to-code/" target="_blank">Read.</a></p>
+			<h4 style="color:white">Attending a bootcamp</h4>
+			<p style="font-weight:300">BLOG: I&apos; d hire these code campers in a heartbeat. By Tim Gray. <a href="https://medium.com/high-tech-gap-year/high-tech-gap-year-hiring-managers-are-discovering-code-camps-24d8e5323997" target="_blank">Read.</a></p>
+			<p style="font-weight:300">BLOG: 5 reasons why you should join a coding bootcamp. By Yoni Binstock. <a href="https://medium.com/@YoniBinstock/5-reasons-why-you-should-join-a-coding-bootcamp-94f45d26ef18" target="_blank">Read.</a></p>
 		</div>
 
 		<div id="videoModal" class="modal fade">
@@ -157,9 +161,9 @@
 					<div class="modal-body">
 						<iframe width="100%" height="315" src="https://www.youtube.com/embed/nTZqv9tCDtY?list=FLL0r-H55tY27-NYeZatNH3w" frameborder="0" allowfullscreen></iframe>
 					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+				</div>
+			</div>
+		</div>
 
 	</script>
 
@@ -199,30 +203,30 @@
 		</div>
 	</script>
 
-				<script id="blog" type="x-handlebars-template">
-					<div class="myTitle" >
-						<h1>{{article}}</h1>
-					</div>
-				</script>
-				<script id="contact" type="x-handlebars-template">
-					<div class="row">
-						<div class="col-md-6"></div>
-						<div class="col-md-6">
-							<form>
-								<label>Name</label>
-								<input focus="true" type="text" class="form-control" placeholder="Name">
-								<label>Email</label>
-								<input type="text" class="form-control" placeholder="example@mail.com">
-								<label>Subject</label>
-								<input type="text" class="form-control" placeholder="Subject">
-								<label>Message</label>
-								<textarea name="Text1" class="form-control" rows="10" placeholder="Message"></textarea>
-								<br>
-								<button class="btn btn-success">Send</button>
-							</form>
-						</div>
-					</div>
-				</script>
+	<script id="blog" type="x-handlebars-template">
+		<div class="myTitle" >
+			<h1>{{article}}</h1>
+		</div>
+	</script>
+	<script id="contact" type="x-handlebars-template">
+		<div class="row">
+			<div class="col-md-6"></div>
+			<div class="col-md-6">
+				<form>
+					<label>Name</label>
+					<input focus="true" type="text" class="form-control" placeholder="Name">
+					<label>Email</label>
+					<input type="text" class="form-control" placeholder="example@mail.com">
+					<label>Subject</label>
+					<input type="text" class="form-control" placeholder="Subject">
+					<label>Message</label>
+					<textarea name="Text1" class="form-control" rows="10" placeholder="Message"></textarea>
+					<br>
+					<button class="btn btn-success">Send</button>
+				</form>
+			</div>
+		</div>
+	</script>
 
 
 
