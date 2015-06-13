@@ -196,6 +196,10 @@ h2.projectTitle{
 	p {
 		font-size: 15px;
 	}
+	.contactMe{
+		font-weight: 300;
+		text-decoration: none
+	}
 
 }
 
