@@ -6,8 +6,8 @@ var aboutSource;
 var aboutTemplate;
 var projectsSource;
 var projectsTemplate;
-var experienceSource;
-var experienceTemplate;
+var extrasSource;
+var extrasTemplate;
 var wiwoSource;
 var wiwoTemplate;
 var blogSource;
@@ -26,7 +26,7 @@ var Router = Backbone.Router.extend({
 		"":"index",
 		"about": "about", 
 		"projects":"projects",
-		"experience": "experience",
+		"extras": "extras",
 		"wiwo": "wiwo",
 		"blog": "blog",
 		"contact":"contact"
@@ -44,8 +44,8 @@ var router = new Router();
 	aboutTemplate = Handlebars.compile(aboutSource);
 	projectsSource = $("#projects").html();
 	projectsTemplate = Handlebars.compile(projectsSource);
-	experienceSource = $("#experience").html();
-	experienceTemplate = Handlebars.compile(experienceSource);
+	extrasSource = $("#extras").html();
+	extrasTemplate = Handlebars.compile(extrasSource);
 	wiwoSource = $("#wiwo").html();
 	wiwoTemplate = Handlebars.compile(wiwoSource);
 	blogSource = $("#blog").html();
@@ -121,17 +121,45 @@ function projects () {
 	$("#projectsButton").css("background-color", "yellow");
 }
 
-function experience () {
-	var content = experienceTemplate({
+function extras () {
+	var content = extrasTemplate({
+		title:"Extras"
 	});
 	$("#container").html(content);
-	$("#experienceButton").css("background-color", "yellow");
+	$("#extrasButton").css("background-color", "yellow");
 }
 
 function wiwo () {
 	var content = wiwoTemplate({
 		title: "What I'm Working on",
-		wiwo1: "This"
+		wiwo: [
+		{
+			title: "Renalab",
+			text: "Web app for a Medical Laboratory. The app will allow patients to login into the app and see their results as well as the notes and diagnosis that the physician will leave them. On the other hand, this app would allow the company store all their patients results and become a paperless company. The project is being build in Ruby on Rails and will use Mandrill and Twilio APIs.",
+			link: "href=https://github.com/lalogf/renalab target=blank",
+			button:"Github",
+			modal: false,
+			modalId: "github"
+		},
+		{
+			title: "Soulutions",
+			text: "Website for a new Digital Boutique. Showing their previous works and offering their services to create and develop astonishing digital products.",
+			link: "data-toggle=modal data-target=#screenshotModal",
+			button: "Screenshot",
+			modal: true,
+			modalId: "screenshotModal",
+			modalcontent:"<img style=width:100% src=http://www.ucarecdn.com/21d579b3-01c8-4548-a01c-bb11537affb2/ScreenShot20150613at125002AM.png>"
+		},
+		{
+			title: "Peru API",
+			text: "Web API that will store the whole list of districts, provinces and departments from Peru, so developers will be able to use it to help their costumers when filling their contact and check out forms. It began as a helper for my own projects, but it'll be open source. Its first version is built on Ruby on Rails and deployed to Heroku.",
+			link: "data-toggle=modal data-target=#sneakPeekModal",
+			button:"Sneak peek",
+			modal: true,
+			modalId: "sneakPeekModal",
+			modalcontent:"<form><p>Departamento</p><select id=departamentos class=form-control><option>Departamento</option></select><p>Provincia</p><select id=provincias class=form-control><option>Provincia</option></select ><p>Distrito</p><select id=distritos class=form-control><option>Distrito</option></select></form>"
+		},
+		]
 	});
 	$("#container").html(content);
 	$("#wiwoButton").css("background-color", "yellow");
@@ -161,7 +189,7 @@ function contact () {
 router.on("route:index", index);
 router.on("route:about", about);
 router.on("route:projects", projects);
-router.on("route:experience", experience);
+router.on("route:extras", extras);
 router.on("route:wiwo", wiwo);
 router.on("route:blog", blog);
 router.on("route:contact", contact);

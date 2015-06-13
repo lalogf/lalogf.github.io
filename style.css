@@ -100,9 +100,13 @@ h2.projectTitle{
 	font-size: 60px;
 }
 
+.controls{
+	top:50;
+}
 
 .carousel-control.right, .carousel-control.left {
 	background:none;
+/*	top:50;*/
 }
 
 .carousel-control .right{
@@ -133,6 +137,7 @@ h2.projectTitle{
 .btn-default{
 	border-radius: 0px;
 	font-family: 'Lato', sans-serif;
+	font-weight: 300; 
 	background: none;
 	border: solid 1px white;
 	text-decoration: none;
@@ -144,7 +149,9 @@ h2.projectTitle{
 
 .btn-default:hover, .btn-default:active{
 	background: none;
-	border:solid 1px black;
+	background-color: rgba(0,0,0,0.7);
+	border:none;
+	color:white;
 }
 
 
@@ -197,7 +204,18 @@ h2.projectTitle{
 	}
 }
 
+.captionTitle{
+	font-weight: 300;
+	color:white;
+}
 
+.captionText{
+	color:white;
+}
+
+.thumbnail{
+	background-color: rgba(0,0,0,0.7)
+}
 
 
 /*Navbar*/
@@ -248,3 +266,10 @@ button.navbar-toggle:active, button.navbar-toggle:focus, button.navbar-toggle:ho
 	width: 25px;
 }
 
+.alert{
+	border: 0px;
+	border-radius: 0px;
+	background: none;
+	background-color: black;
+	color:white;
+}
