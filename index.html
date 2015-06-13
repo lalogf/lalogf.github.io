@@ -128,27 +128,34 @@
 					{{/each}}
 				</div>
 			</div>
-		</div>
-		<!-- Controls -->
-		<div class="controls">
-			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-				<span class="left"><</span>
-			</a>
-			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-				<span class="right">></span>
-			</a>
+			<div class="controls">
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="left"><</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="right">></span>
+				</a>
+			</div>
 		</div>
 
 	</script>
 
 	<script id="extras" type="x-handlebars-template">
 		<div class="row" >
-			<h4 style="color:white">Why I learned to code?</h4>
-			<p style="font-weight:300">VIDEO: Crash course in digital literacy. By Mattan Griffel. <a data-toggle="modal" data-target="#videoModal">Watch video</a></p>
-			<p style="font-weight:300">BLOG: Why founders should know how to code. By Steve Blank. <a href="http://steveblank.com/2014/09/03/should-founders-know-how-to-code/" target="_blank">Read.</a></p>
-			<h4 style="color:white">Attending a bootcamp</h4>
-			<p style="font-weight:300">BLOG: I&apos; d hire these code campers in a heartbeat. By Tim Gray. <a href="https://medium.com/high-tech-gap-year/high-tech-gap-year-hiring-managers-are-discovering-code-camps-24d8e5323997" target="_blank">Read.</a></p>
-			<p style="font-weight:300">BLOG: 5 reasons why you should join a coding bootcamp. By Yoni Binstock. <a href="https://medium.com/@YoniBinstock/5-reasons-why-you-should-join-a-coding-bootcamp-94f45d26ef18" target="_blank">Read.</a></p>
+			<h4>Why I learned to code?</h4>
+			<p class="extras">VIDEO: Crash course in digital literacy. By Mattan Griffel. <a href="#" data-toggle="modal" data-target="#videoModal">Watch video</a></p>
+			<p class="extras">BLOG: Why founders should know how to code. By Steve Blank. <a href="http://steveblank.com/2014/09/03/should-founders-know-how-to-code/" target="_blank">Read.</a></p>
+			<h4>Attending a bootcamp</h4>
+			<p class="extras">BLOG: I&apos; d hire these code campers in a heartbeat. By Tim Gray. <a href="https://medium.com/high-tech-gap-year/high-tech-gap-year-hiring-managers-are-discovering-code-camps-24d8e5323997" target="_blank">Read.</a></p>
+			<p class="extras">BLOG: 5 reasons why you should join a coding bootcamp. By Yoni Binstock. <a href="https://medium.com/@YoniBinstock/5-reasons-why-you-should-join-a-coding-bootcamp-94f45d26ef18" target="_blank">Read.</a></p>
+			<h4>Classes I&apos; m taking</h4>
+			<p class="extras">Growth Hacking - One Month. <a href="http://mbsy.co/c7lmh" target="_blank">Learn with me</a> </p>
+			<p class="extras">Web Security - One Month. <a href="http://mbsy.co/c7lmh" target="blank">Learn with me</a></p>
+			<p class="extras">CS-50. Introduction to Computer Science I - Harvard College. <a href="http://cs50.tv/2014/fall/" target="blank">Learn with me</a></p>
+			<h4>What I&apos; m listenging </h4>
+			<p class="extras">PODCAST: StartUp is a podcast series about what it’s really like to get a business off the ground. <a href="http://gimletmedia.com/show/startup/" target="_blank">Listen</a></p>
+			<p class="extras">PODCAST: The Cultcast - the best 30 + minutes Apple conversation you are going to hear. <a href="http://www.cultofmac.com/cultcast/" target="_blank">Listen</a> </p>
+			<p class="extras">PODCAST: Reply all - a show about the internet <a href="http://gimletmedia.com/show/reply-all/" target="_blank"> Listen</a> </p>
 		</div>
 
 		<div id="videoModal" class="modal fade">
@@ -170,7 +177,7 @@
 
 	<script id="wiwo" type="x-handlebars-template">
 		<div class="row" >
-			<h3 style="margin:0 0 20px 0; line-height:60px;">{{title}}</h3>
+			<h3 class="wiwoTitle">{{title}}</h3>
 			{{#each wiwo}}
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail">					
@@ -210,20 +217,14 @@
 	</script>
 	<script id="contact" type="x-handlebars-template">
 		<div class="row">
-			<div class="col-md-6"></div>
 			<div class="col-md-6">
-				<form>
-					<label>Name</label>
-					<input focus="true" type="text" class="form-control" placeholder="Name">
-					<label>Email</label>
-					<input type="text" class="form-control" placeholder="example@mail.com">
-					<label>Subject</label>
-					<input type="text" class="form-control" placeholder="Subject">
-					<label>Message</label>
-					<textarea name="Text1" class="form-control" rows="10" placeholder="Message"></textarea>
-					<br>
-					<button class="btn btn-success">Send</button>
-				</form>
+				<h1>Let&apos; s talk</h1>
+			</div>
+			<div class="col-md-6 contentBox">
+					<p>Have an idea I can help to develop?</p>
+					<p style="font-size:30px"><span class="glyphicon glyphicon-envelope" style="margin-right:10px;" aria-hidden="true"></span> <a href="mailto:lalogf@gmail.com"> lalogf@gmail.com</a></p>
+					<p style="font-size:30px"><span class="glyphicon glyphicon-earphone" aria-hidden="true" style="margin-right:10px;"></span> <a href="tel:+51999900673">+51 999900673 </a></p>
+					<p style="font-size:30px"><span class="glyphicon glyphicon-earphone" aria-hidden="true" style="margin-right:10px;"></span><a href="tel:+14158003615"> + 1 415 800 3615</a></p>
 			</div>
 		</div>
 	</script>

@@ -44,9 +44,22 @@ h3 {
 	text-align: center;
 }
 
+h4{
+	color:white;
+}
+
 
 p{
-	font-size: 20px
+	font-size: 20px;
+}
+
+p.extras{
+	font-weight: 300;
+}
+
+p.extras a{
+	font-size: 15px;
+	font-weight: 400;
 }
 
 label {
@@ -60,6 +73,11 @@ label {
 }
 .blinkTitle{
 	color:black;
+}
+
+.wiwoTitle{
+	margin:0 0 20px 0; 
+	line-height:60px;
 }
 
 .intro{
@@ -104,9 +122,12 @@ h2.projectTitle{
 	top:50;
 }
 
+.carousel-control{
+	top:20%;
+	bottom:30%;
+}
 .carousel-control.right, .carousel-control.left {
 	background:none;
-/*	top:50;*/
 }
 
 .carousel-control .right{
@@ -122,6 +143,7 @@ h2.projectTitle{
 	top:40%;
 	position: absolute
 }
+
 
 .carouselContainer{
 	margin:50px auto;
@@ -164,6 +186,11 @@ h2.projectTitle{
 	h3{
 		font-size: 20px;
 		line-height: 60px;
+	}
+	.wiwoTitle{
+		margin:0 0 10px 0; 
+		line-height:60px;
+		font-size: 40px;
 	}
 
 	p {

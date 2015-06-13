@@ -54,9 +54,6 @@ var ready = function () {
 	$(".closeButton").click(function(){
 		$(this).parent().attr("hidden","true")
 	});
-
-
-
 };
 
 $(document).ready(ready);
