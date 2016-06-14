@@ -57,8 +57,8 @@ var router = new Router();
 function index () {
 	var content = indexTemplate({
 		name: "LALO GONZALEZ",
-		title1: "WEB DEVELOPER",
-		title2: "UX DESIGNER"
+		title1: "UX - DESIGNER",
+		title2: "WEB DEVELOPER"
 	});	
 	$("#container").html(content);
 };
@@ -147,6 +147,33 @@ function wiwo () {
 			modal: false,
 			modalId: "screenshotModal",
 			modalcontent:"<img style=width:100% src=http://www.ucarecdn.com/21d579b3-01c8-4548-a01c-bb11537affb2/ScreenShot20150613at125002AM.png>"
+		},
+		{
+			title: "Peru API",
+			text: "Web API that will store the whole list of districts, provinces and departments from Peru, so developers will be able to use it to help their costumers when filling their contact and check out forms. It began as a helper for my own projects, but it'll be open source. Its first version is built on Ruby on Rails and deployed to Heroku.",
+			link: "data-toggle=modal data-target=#sneakPeekModal",
+			button:"Sneak peek",
+			modal: true,
+			modalId: "sneakPeekModal",
+			modalcontent:"<form><p>Departamento</p><select id=departamentos class=form-control><option>Departamento</option></select><p>Provincia</p><select id=provincias class=form-control><option>Provincia</option></select ><p>Distrito</p><select id=distritos class=form-control><option>Distrito</option></select></form>"
+		}, 
+		{
+			title: "Peru API",
+			text: "Web API that will store the whole list of districts, provinces and departments from Peru, so developers will be able to use it to help their costumers when filling their contact and check out forms. It began as a helper for my own projects, but it'll be open source. Its first version is built on Ruby on Rails and deployed to Heroku.",
+			link: "data-toggle=modal data-target=#sneakPeekModal",
+			button:"Sneak peek",
+			modal: true,
+			modalId: "sneakPeekModal",
+			modalcontent:"<form><p>Departamento</p><select id=departamentos class=form-control><option>Departamento</option></select><p>Provincia</p><select id=provincias class=form-control><option>Provincia</option></select ><p>Distrito</p><select id=distritos class=form-control><option>Distrito</option></select></form>"
+		},
+		{
+			title: "Peru API",
+			text: "Web API that will store the whole list of districts, provinces and departments from Peru, so developers will be able to use it to help their costumers when filling their contact and check out forms. It began as a helper for my own projects, but it'll be open source. Its first version is built on Ruby on Rails and deployed to Heroku.",
+			link: "data-toggle=modal data-target=#sneakPeekModal",
+			button:"Sneak peek",
+			modal: true,
+			modalId: "sneakPeekModal",
+			modalcontent:"<form><p>Departamento</p><select id=departamentos class=form-control><option>Departamento</option></select><p>Provincia</p><select id=provincias class=form-control><option>Provincia</option></select ><p>Distrito</p><select id=distritos class=form-control><option>Distrito</option></select></form>"
 		},
 		{
 			title: "Peru API",
