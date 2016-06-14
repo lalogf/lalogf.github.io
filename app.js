@@ -54,6 +54,16 @@ var ready = function () {
 	$(".closeButton").click(function(){
 		$(this).parent().attr("hidden","true")
 	});
+
+	function resizeBoxes(){
+		var boxHeight = $(".titleBox").css("height");
+		$(".contentBox").css("height", boxHeight);
+		var newarray = [];
+		$(".contentBox2").each(function(){newarray.push($(this).css("height").split("px")[0])});
+		var newsize = Math.max.apply(Math,newarray);
+		$(".contentBox2").css("height",newsize);
+	}
+	resizeBoxes();
 };
 
 $(document).ready(ready);

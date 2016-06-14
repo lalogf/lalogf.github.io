@@ -105,7 +105,19 @@ label {
 	height:230px;
 }
 
-.contentBox p {
+.contentBox3{
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 20px;
+	height:auto;
+}
+
+.contentBox2{
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 20px;
+	height:auto;
+}
+
+.contentBox p, .contentBox2 p, .contentBox3 {
 	font-weight: 300;
 }
 .projectContainer{
@@ -169,11 +181,34 @@ h2.projectTitle{
 	color:rgb(255,255,255);
 }
 
-.btn-default:hover, .btn-default:active{
+.btn-default:hover, .btn-default:active, .btn-default:focus{
 	background: none;
 	background-color: rgba(0,0,0,0.7);
 	border:none;
 	color:white;
+}
+
+
+
+.btn-success{
+	border-radius: 0px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300; 
+	background: none;
+	background-color: rgba(0,0,0,0.7);
+	border: solid 1px black;
+	text-decoration: none;
+	font-weight: 100;
+	text-shadow:none;
+	color:rgb(255,255,255);
+}
+
+.btn-success:hover, .btn-success:active, .btn-success:focus{
+	background: none;
+	border:none;
+	color:black;
+	border: solid 1px black;
+	font-weight: 300;
 }
 
 
@@ -317,4 +352,14 @@ button.navbar-toggle:active, button.navbar-toggle:focus, button.navbar-toggle:ho
 	background: none;
 	background-color: black;
 	color:white;
+}
+
+.horizontal{
+	width:300px; 
+	padding:20px 0
+}
+
+.vertical{
+	width:120px; 
+	padding:20px 0
 }
