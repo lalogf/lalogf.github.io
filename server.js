@@ -130,30 +130,40 @@ function projects () {
 			{
 				projecttitle:"Banca Movil",
 				projectdescription:"Design of the Mobile Banking app. I defined a better way to authenticate costumers, a new and improved UI, an easier way to make key transactions (improving UX), and a list of new, mobile only, features such as shared payments.",
-				image: "assets/ZombieSurvivalGuide.png",
 				liveapp: "https://itunes.apple.com/cr/app/banca-movil-bcp/id777961079?mt=8",
 				link: "Go to the app"
 			},
 			{
-				projecttitle:"ATMs Menu",
-				projectdescription:"Project to improve the architecture information and the visual design of the ATM menus, in order to make them more friendly to the users and to promote their usage for transactions other than cash withdrawal",
-				image: "assets/ZombieSurvivalGuide.png",
+				projecttitle:"ATMs Navigation Menu",
+				projectdescription:"Project to improve the architecture information and the visual design of the ATM menus, in order to make them more friendly to the users and to promote their usage for transactions other than cash withdrawal"
 			},
 			{
 				projecttitle:"Deposit ATMs",
-				projectdescription:"Ran the pilot in 10 BCP branches, worked closely with users, costumers and bank tellers, to get their feedback on how did they feel using this new ATMs. Later I managed the deployment of the Cash deposit ATMs nationwide.",  
-				image: "assets/ZombieSurvivalGuide.png",
-			},
+				projectdescription:"Ran the pilot in 10 BCP branches, worked closely with users, costumers and bank tellers, to get their feedback on how did they feel using this new ATMs. Later I managed the deployment of the Cash deposit ATMs nationwide."
+			}
 			]
 		},
 		{
 			title: "General Assembly",
-			text: "Site that gives user information about secure places to hide in the case of a Zombie attack. It displays a  It also gives you options to buy survival kits. Built in Ruby on Rails, using MapBox and Foursquare APIs, and Rspec and Capybara for testing." ,
-			liveapp: "http://zombiesurvivalguide.herokuapp.com",
-			github: "http://github.com/lalogf/zombielist",
-			carouselClass: "item",
-			class: "horizontal",
-			image: "assets/ZombieSurvivalGuide.png"
+			text: "Intense and challenging 12 week Full-Stack Web Development program, covering the best practices in front end and back end web development",
+			projects:[
+			{
+				projecttitle:"Zombie Survival Guide",
+				projectdescription:"Site that gives user information about secure places to hide in the case of a Zombie attack. It displays a  It also gives you options to buy survival kits. Built in Ruby on Rails, using MapBox and Foursquare APIs, and Rspec and Capybara for testing.",
+				link:"Explore",
+				liveapp:"http://peru-compare.herokuapp.com",
+				size:2,
+				github: "http://github.com/lalogf/plan"
+			},
+			{
+				projecttitle:"Plan Compare",
+				projectdescription:"Site that allows users to choose their best option when buying or renewing a smartphone. It compares plans based on prices, amount of data and SMS and minutes offered by the mobile carriers. Built in Node.js, using Sequelizejs, Expressjs, Passport and Bcrypt.",
+				liveapp:"http://zombiesurvivalguide.herokuapp.com/",	
+				link:"Explore",
+				size:2,
+				github:"https://github.com/lalogf/zombielist"
+			},
+			]
 		}]
 	});
 
@@ -176,7 +186,7 @@ function wiwo () {
 		wiwo: [
 		{
 			title: "Arte Aparte",
-			text: "Website for a new Digital Boutique. Showing their previous works and offering their services to create and develop astonishing digital products.",
+			text: "Ecommerce that will offer custom phone cases. Users will be able to create and buy their on phone cases. In this ocassion I will emphazise in Emojis! This app is being built in Ruby on Rails and it is using Culqi for processing payments",
 			link: "href=https://arteaparte.herokuapp.com/crea-tu-case/new target=blank",
 			button: "Live App - Dev Mode",
 			modal: false,
@@ -184,10 +194,10 @@ function wiwo () {
 			modalcontent:"<img style=width:100% src=http://www.ucarecdn.com/21d579b3-01c8-4548-a01c-bb11537affb2/ScreenShot20150613at125002AM.png>"
 		},
 		{
-			title: "Renalab",
-			text: "Web app for a Medical Laboratory. The app will allow patients to login into the app and see their results as well as the notes and diagnosis that the physician will leave them. On the other hand, this app would allow the company store all their patients results and become a paperless company. The project is being build in Ruby on Rails and will use Mandrill and Twilio APIs.",
-			link: "href=https://github.com/lalogf/renalab target=blank",
-			button:"Github",
+			title: "Accesibilidad.pe",
+			text: "Personal research project on how peruvian government and businesses aren't obeying the law # 28530. This law encourages the usage of WCAG 2.0 to build more accesible websites so people with disabilites can access them.",
+			link: "http://www.larediberoamericana.com/wp-content/uploads/2012/07/ley-de-promocion-de-acceso-a-internet-para-PCD.pdf target=blank",
+			button:"Learn more about this law",
 			modal: false,
 			modalId: "github"
 		},

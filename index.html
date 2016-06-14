@@ -110,16 +110,23 @@
 						{{#each experience}}
 						<div class="row">
 						<h2 class="projectTitle" >{{title}}</h2>
-						<div class="contentBox3">
+						<div style="text-align:center;font-weight:300">
 							<p>{{text}}</p>
 						</div>
 						{{#projects}}
+						{{#if size}}
+						<div class="col-md-6 contentBox2">
+						{{else}}
 						<div class="col-md-4 contentBox2">
+						{{/if}}
 							<div>
 								<p><strong>{{projecttitle}}</strong></p>
 								<p class="contentText">{{projectdescription}}</p>
 								{{#if link}}
 								<a href="{{liveapp}}" class="btn btn-lg btn-success" target="blank">{{link}}</a>
+								{{/if}}
+								{{#if github}}
+								<a href="{{github}}" class="btn btn-lg btn-success" target="blank">Github</a>
 								{{/if}}
 							</div>
 						</div>
@@ -138,9 +145,9 @@
 				<p class="extras">BLOG: I&apos; d hire these code campers in a heartbeat. By Tim Gray. <a href="https://medium.com/high-tech-gap-year/high-tech-gap-year-hiring-managers-are-discovering-code-camps-24d8e5323997" target="_blank">Read.</a></p>
 				<p class="extras">BLOG: 5 reasons why you should join a coding bootcamp. By Yoni Binstock. <a href="https://medium.com/@YoniBinstock/5-reasons-why-you-should-join-a-coding-bootcamp-94f45d26ef18" target="_blank">Read.</a></p>
 				<h4>Classes I&apos; m taking</h4>
-				<p class="extras">Growth Hacking - One Month. <a href="http://mbsy.co/c7lmh" target="_blank">Learn with me</a> </p>
-				<p class="extras">Web Security - One Month. <a href="http://mbsy.co/c7lmh" target="blank">Learn with me</a></p>
-				<p class="extras">CS-50. Introduction to Computer Science I - Harvard College. <a href="http://cs50.tv/2014/fall/" target="blank">Learn with me</a></p>
+				<p class="extras">MVP - One Month. <a href="http://onemonth.com/courses/mvp" target="_blank">Learn with me</a> </p>
+				<p class="extras">Powering up with React - CodeSchool. <a href="https://www.codeschool.com/courses/powering-up-with-react" target="blank">Learn with me</a></p>
+				<p class="extras">CS-50. Introduction to Computer Science I - Harvard College. <a href="http://cs50.tv/" target="blank">Learn with me</a></p>
 				<h4>What I&apos; m listenging </h4>
 				<p class="extras">PODCAST: StartUp is a podcast series about what it’s really like to get a business off the ground. <a href="http://gimletmedia.com/show/startup/" target="_blank">Listen</a></p>
 				<p class="extras">PODCAST: The Cultcast - the best 30 + minutes Apple conversation you are going to hear. <a href="http://www.cultofmac.com/cultcast/" target="_blank">Listen</a> </p>
@@ -228,7 +235,9 @@
 		<script type="text/javascript" src="app.js"></script>
 		<script type="text/javascript" src="server.js"></script>
 		<script>
-		mixpanel.track("Viewed Landing Page");
+		if(window.location.hostname === "lalogf.github.io"){
+			mixpanel.track("Entro a la web");
+		}
 		</script>
 	</body>
 	</html> 
