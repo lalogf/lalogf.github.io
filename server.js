@@ -95,12 +95,12 @@ function projects () {
 				link: "Play with the prototype",
 				},
 				{projecttitle:"Cienciactiva",
-				projectdescription:"UX researcher and Designer in a project for a government entity that gives funds and opportunities in R&D to peruvian scientists. The challenge: How might we engage more peruvian scientists with the opportunities that Cienciactiva offers",
+				projectdescription:"UX researcher and Designer in a project for a government entity that gives funds and opportunities in R&D to peruvian scientists. The challenge: How might we engage more peruvian scientists with the opportunities that Cienciactiva offers.",
 				liveapp: "https://invis.io/EZ72QUVB4#/153332315_HOME target=blank",
 				link: "Explore the design",
 				},
 				{projecttitle:"ADEX",
-				projectdescription:"UX researcher and designer in a project with ADEX. Unify the digital experience in all of the ADEX's different business units",
+				projectdescription:"UX researcher and designer in a project with ADEX. The challenge: Unify the digital experience in all of the ADEX's different business units.",
 				liveapp: "https://invis.io/DG7AR8YA8#/158488539_HOME  target=blank",
 				link: "Explore the design",
 				},
@@ -135,7 +135,7 @@ function projects () {
 			},
 			{
 				projecttitle:"ATMs Navigation Menu",
-				projectdescription:"Project to improve the architecture information and the visual design of the ATM menus, in order to make them more friendly to the users and to promote their usage for transactions other than cash withdrawal"
+				projectdescription:"Project to improve the architecture information and the visual design of the ATM menus, in order to make them more friendly to the users and to promote their usage for transactions other than cash withdrawal."
 			},
 			{
 				projecttitle:"Deposit ATMs",
@@ -186,7 +186,7 @@ function wiwo () {
 		wiwo: [
 		{
 			title: "Arte Aparte",
-			text: "Ecommerce that will offer custom phone cases. Users will be able to create and buy their on phone cases. In this ocassion I will emphazise in Emojis! This app is being built in Ruby on Rails and it is using Culqi for processing payments",
+			text: "Ecommerce that will offer custom phone cases. Users will be able to create and buy their own phone cases. In this ocassion I will emphazise in Emojis! This app is being built in Ruby on Rails and it is using Culqi for processing payments.",
 			link: "href=https://arteaparte.herokuapp.com/crea-tu-case/new target=blank",
 			button: "Live App - Dev Mode",
 			modal: false,
