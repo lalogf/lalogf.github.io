@@ -97,7 +97,7 @@ function projects () {
 				{projecttitle: "Wayra",
 				projectdescription: "Helping some of the Wayra Startups on their UX Design process as they develop new releases of their products.",
 				liveapp: "data-toggle=modal data-target=#wayra",
-				linktomo:"Explore the web",
+				linktomo:"Start ups",
 				modal: true,
 				modalId: "wayra",
 				modalcontent:"<p>Currently helping the following start ups on UX Design</p><br><ul><li><p><a herf='https://www.facebook.com/tumicrope/?fref=ts' target='blank'>Tu Micro</a></p></li><li><p><a href='https://itunes.apple.com/au/app/mapsalud-solucion-tecnologica/id1110061746?mt=8' target='blank'>Mapsalud</a></p></li><li><p><a href='http://www.restaurant.pe' target='blank'>Restaurant.pe</a></p></li></ul>"
