@@ -18,16 +18,7 @@
 				mixpanel.init("bb3d2e86c49541c6e98f96fa8de3f8ce");
 		</script>
 	<!-- end Mixpanel -->
-	<script type='text/javascript'>
-		var _vwo_code=(function(){
-			var account_id=225113,
-			settings_tolerance=2000,
-			library_tolerance=2500,
-			use_existing_jquery=false,
-// DO NOT EDIT BELOW THIS LINE
-f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
-</script>
-<!-- End Visual Website Optimizer Asynchronous Code -->
+
 	</head>
 	<body>
 		<!-- <a href="https://github.com/lalogf" target="blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a> -->
@@ -51,7 +42,7 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav nav-justified">
 						<li><a class="navbarMenuItems" href="#">HOME</a></li>
-						<li><a class="navbarMenuItems" id="aboutButton" href="#about">ABOUT</a></li>
+						<li><a class="navbarMenuItems" id="aboutButton" href="#about">ABOUT ME</a></li>
 						<li><a class="navbarMenuItems" id="projectsButton" href="#projects">PROJECTS</a></li>
 						<li><a class="navbarMenuItems" id="wiwoButton" href="#wiwo">WIWO</a></li>
 						<li><a class="navbarMenuItems" id="extrasButton" href="#extras">EXTRAS</a></li>
@@ -137,6 +128,23 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 								{{/if}}
 								{{#if github}}
 								<a href="{{github}}" class="btn btn-lg btn-success" target="blank">Github</a>
+								{{/if}}
+								{{#if modal}}
+								<a {{liveapp}} class="btn btn-lg btn-success">{{linktomo}}</a>
+								<div id="{{modalId}}" class="modal fade">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<p style="font-weight:400" class="modal-title">{{projecttitle}} Start Ups</p>
+											</div>
+											<div class="modal-body">
+												{{{modalcontent}}}
+											</div>
+										</div><!-- /.modal-content -->
+									</div><!-- /.modal-dialog -->
+								</div><!-- /.modal -->
+
 								{{/if}}
 							</div>
 						</div>

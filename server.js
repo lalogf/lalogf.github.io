@@ -73,7 +73,7 @@ function about (){
 		intro: "I'm a UX Designer, Marketer and Web Developer, who enjoys building usable and enjoyable stuff for the Internet age.",
 		items: 
 		[{  title: "UX Designer - Marketing",
-		text: "I have over 8 years of experience in Product Managment and UX Design. During this years, I have helped organizations and businesses of all sizes to craft better digital products. I have participated in the planning and design of the most downloaded and used Mobile Banking app in Peru. I have helped a NGO that defends Human Rigths in the Digital field."},
+		text: "I have over 8 years of experience in Product Managment and UX Design. During this period, I have helped organizations and businesses of all sizes to craft better digital products. I have participated in the planning and design of the most downloaded and used Mobile Banking app in Peru. I have helped a NGO that defends Human Rigths in the Digital field."},
 		{ 	title: "Web Developer",
 		text: "I can code in Ruby, Javascript, HTML and CSS. I experienced working with frameworks such as: Ruby on Rails, Nodejs, Sequelize, Express, Handlebars and Backbone. I normally use Postgresql as DB and Passport/Bcrypt or Devise for authentication. I have deployed to Heroku and AWS. I was trained at General Assembly in San Francisco, CA and I'm sharping my skills at Onemonth.com."}
 		]
@@ -86,6 +86,30 @@ function projects () {
 	var content = projectsTemplate({
 		experience: [
 		{
+			title:"Soulutions",
+			text: "Working in projects as UX Designer and Web Developer",
+			projects:[
+				{projecttitle: "Soulutions",
+				projectdescription: "Design and development of the company website.",
+				liveapp: "http://www.soulutions.com.pe",
+				link:"Explore the web"
+				},
+				{projecttitle: "Wayra",
+				projectdescription: "Helping some of the Wayra Startups on their UX Design process as they develop new releases of their products.",
+				liveapp: "data-toggle=modal data-target=#wayra",
+				linktomo:"Explore the web",
+				modal: true,
+				modalId: "wayra",
+				modalcontent:"<p>Currently helping the following start ups on UX Design</p><br><ul><li><p><a herf='https://www.facebook.com/tumicrope/?fref=ts' target='blank'>Tu Micro</a></p></li><li><p><a href='https://itunes.apple.com/au/app/mapsalud-solucion-tecnologica/id1110061746?mt=8' target='blank'>Mapsalud</a></p></li><li><p><a href='http://www.restaurant.pe' target='blank'>Restaurant.pe</a></p></li></ul>"
+				},
+				{projecttitle: "Khalid CrossFit",
+				projectdescription: "Design and development of the website and digital strategy for the first CrossFit Box in Chiclayo",
+				liveapp: "http://www.khalidcrossfit.pe",
+				link:"Explore the web"
+				},
+			]
+		},
+		{
 			title: "Laboratoria",
 			text: "Worked in a variety of projects as UX Designer and Project Manager",
 			projects: [
@@ -96,8 +120,8 @@ function projects () {
 				},
 				{projecttitle:"Cienciactiva",
 				projectdescription:"UX researcher and Designer in a project for a government entity that gives funds and opportunities in R&D to peruvian scientists. The challenge: How might we engage more peruvian scientists with the opportunities that Cienciactiva offers.",
-				liveapp: "https://invis.io/EZ72QUVB4#/153332315_HOME",
-				link: "Explore the design",
+				liveapp: "http://www.cienciactiva.gob.pe/",
+				link: "Explore the web",
 				},
 				{projecttitle:"ADEX",
 				projectdescription:"UX researcher and designer in a project with ADEX. The challenge: Unify the digital experience in all of the ADEX's different business units.",
@@ -109,10 +133,10 @@ function projects () {
 				liveapp: "https://invis.io/D76A3ABKB#/133293341_HOME",
 				link: "Explore the design",
 				},
-				{projecttitle:"LOOP",
-				projectdescription:"UX Researcher and Designer to help LOOP be seen by its community as a social entrepreneurship and not as a non-profit.",
-				liveapp: "https://invis.io/RM5P31D9W#/129446408_Home",
-				link: "Explore the design",
+				{projecttitle:"Quinta Miraflores Boutique Hotel",
+				projectdescription:"Web developer and Designer for the renewal of the website of this boutique hotel in the heart of Lima, Peru.",
+				liveapp: "http://www.quintamiraflores.com",
+				link: "Explore the web",
 				},
 				{projecttitle:"Kmimos",
 				projectdescription:"Project Manager and sometimes web developer to help this mexican startup validate their business model.",
