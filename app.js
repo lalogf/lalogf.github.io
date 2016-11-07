@@ -36,6 +36,7 @@ var ready = function () {
 	hideControls = function () {
 		var theWindow = $(window);
 		theWindow.resize(function() {
+			resizeBoxes();
 			if (theWindow.innerWidth() < 600){
 				$(".controls").hide();
 			} else {

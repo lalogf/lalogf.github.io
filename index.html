@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-	<title>Lalo González</title>
+	<title>Lalo González - UX Designer</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<!-- Bootstrap css -->
@@ -26,7 +26,7 @@
 		<div class="text-center alert alert-message" style="font-weight:400">
 			I'm currently available for job opportunities. <span class="glyphicon glyphicon-remove pull-right closeButton" aria-hidden="true"></span>
 		</div>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -36,6 +36,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
+					<a class="navbar-brand mobile" href="#"><p style="color:black"><strong>Lalo Gonzalez</strong></p></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,7 +44,7 @@
 					<ul class="nav nav-justified">
 						<li><a class="navbarMenuItems" href="#">HOME</a></li>
 						<li><a class="navbarMenuItems" id="aboutButton" href="#about">ABOUT ME</a></li>
-						<li><a class="navbarMenuItems" id="projectsButton" href="#projects">PROJECTS</a></li>
+						<li><a class="navbarMenuItems" id="experienceButton" href="#experience">EXPERIENCE</a></li>
 						<li><a class="navbarMenuItems" id="wiwoButton" href="#wiwo">WIWO</a></li>
 						<li><a class="navbarMenuItems" id="extrasButton" href="#extras">EXTRAS</a></li>
 						<!-- 		<li><a class="navbarMenuItems" id="blogButton" href="#blog">BLOG</a></li> -->
@@ -106,29 +107,36 @@
 			</div>
 		</script>
 
-		<script id="projects" type="x-handlebars-template">
+		<script id="experience" type="x-handlebars-template">
 			
 						{{#each experience}}
 						<div class="row">
-						<h2 class="projectTitle" >{{title}}</h2>
-						<div style="text-align:center;font-weight:300">
+						<div class="col-md-10 col-md-push-1">
+						<h2 class="projectTitle" ><strong>{{title}}</strong></h2>
+						<div style="font-weight:300">
 							<p>{{text}}</p>
 						</div>
+						</div>
 						{{#projects}}
-						{{#if size}}
-						<div class="col-md-6 contentBox2">
-						{{else}}
-						<div class="col-md-4 contentBox2">
-						{{/if}}
-							<div>
-								<p><strong>{{projecttitle}}</strong></p>
-								<p class="contentText">{{projectdescription}}</p>
+						<div class="col-md-10 col-md-push-1 contentBox2">
+							<p>
+								<strong>{{projecttitle}}</strong>
+							</p>
+						
+							
+							<div class="contentText">
+								<p >{{projectdescription}}</p>
+							
+							
+								
 								{{#if link}}
 								<a href="{{liveapp}}" class="btn btn-lg btn-success" target="blank">{{link}}</a>
 								{{/if}}
 								{{#if github}}
 								<a href="{{github}}" class="btn btn-lg btn-success" target="blank">Github</a>
 								{{/if}}
+								
+								</div>
 								{{#if modal}}
 								<a {{liveapp}} class="btn btn-lg btn-success">{{linktomo}}</a>
 								<div id="{{modalId}}" class="modal fade">
@@ -144,10 +152,9 @@
 										</div><!-- /.modal-content -->
 									</div><!-- /.modal-dialog -->
 								</div><!-- /.modal -->
-
 								{{/if}}
 							</div>
-						</div>
+						
 						{{/projects}}
 							</div>
 						{{/each}}

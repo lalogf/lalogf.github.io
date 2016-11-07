@@ -19,9 +19,9 @@ var contactTemplate;
 		var boxHeight = $(".titleBox").css("height");
 		$(".contentBox").css("height", boxHeight);
 		var newarray = [];
-		$(".contentText").each(function(){newarray.push($(this).css("height").split("px")[0])});
+		$(".contentBox2").each(function(){newarray.push($(this).css("height").split("px")[0])});
 		var newsize = Math.max.apply(Math,newarray);
-		$(".contentText").css("height",newsize);
+		$(".contentBox2").css("height",newsize);
 	}
 
 
@@ -29,7 +29,7 @@ var Router = Backbone.Router.extend({
 	routes: {
 		"":"index",
 		"about": "about", 
-		"projects":"projects",
+		"experience":"experience",
 		"extras": "extras",
 		"wiwo": "wiwo",
 		"blog": "blog",
@@ -46,7 +46,7 @@ var router = new Router();
 	indexTemplate = Handlebars.compile(indexSource);
 	aboutSource = $("#about").html();
 	aboutTemplate = Handlebars.compile(aboutSource);
-	projectsSource = $("#projects").html();
+	projectsSource = $("#experience").html();
 	projectsTemplate = Handlebars.compile(projectsSource);
 	extrasSource = $("#extras").html();
 	extrasTemplate = Handlebars.compile(extrasSource);
@@ -65,6 +65,7 @@ function index () {
 		title2: "WEB DEVELOPER"
 	});	
 	$("#container").html(content);
+	$(".navbar-brand p strong").html("");
 };
 
 function about (){
@@ -80,76 +81,82 @@ function about (){
 	});	
 	$("#container").html(content);
 	$("#aboutButton").css("background-color", "yellow");
+	$(".navbar-brand p strong").html("ABOUT ME");
+	resizeBoxes();
+	mixpanel.track("Entro a about");
 };
 
-function projects () {
+function experience () {
 	var content = projectsTemplate({
 		experience: [
 		{
-			title:"Soulutions",
-			text: "Working in projects as UX Designer and Web Developer",
+			title:"UX Designer",
+			text: "I have worked as a researcher, designer and consultant on digital projects for established companies and startups. ",
 			projects:[
-				{projecttitle: "Soulutions",
-				projectdescription: "Design and development of the company website.",
-				liveapp: "http://www.soulutions.com.pe",
-				link:"Explore the web"
-				},
-				{projecttitle: "Wayra",
-				projectdescription: "Helping some of the Wayra Startups on their UX Design process as they develop new releases of their products.",
-				liveapp: "data-toggle=modal data-target=#wayra",
-				linktomo:"Start ups",
-				modal: true,
-				modalId: "wayra",
-				modalcontent:"<p>Currently helping the following start ups on UX Design</p><br><ul><li><p><a herf='https://www.facebook.com/tumicrope/?fref=ts' target='blank'>Tu Micro</a></p></li><li><p><a href='https://itunes.apple.com/au/app/mapsalud-solucion-tecnologica/id1110061746?mt=8' target='blank'>Mapsalud</a></p></li><li><p><a href='http://www.restaurant.pe' target='blank'>Restaurant.pe</a></p></li></ul>"
-				},
-				{projecttitle: "Khalid CrossFit",
-				projectdescription: "Design and development of the website and digital strategy for the first CrossFit Box in Chiclayo",
-				liveapp: "http://www.khalidcrossfit.pe",
-				link:"Explore the web"
-				},
-			]
-		},
-		{
-			title: "Laboratoria",
-			text: "Worked in a variety of projects as UX Designer and Project Manager",
-			projects: [
-				{projecttitle:"Universidad del Pacifico",
-				projectdescription:"UX researcher in a project for one of the most important business schools in Peru. The problem: Find a tool to strengthen the relationship with its students and find a better way to communicate with them other than email.",
-				liveapp: "https://marvelapp.com/1e2556e",
-				link: "Play with the prototype",
-				},
 				{projecttitle:"Cienciactiva",
 				projectdescription:"UX researcher and Designer in a project for a government entity that gives funds and opportunities in R&D to peruvian scientists. The challenge: How might we engage more peruvian scientists with the opportunities that Cienciactiva offers.",
 				liveapp: "http://www.cienciactiva.gob.pe/",
 				link: "Explore the web",
 				},
-				{projecttitle:"ADEX",
-				projectdescription:"UX researcher and designer in a project with ADEX. The challenge: Unify the digital experience in all of the ADEX's different business units.",
-				liveapp: "https://invis.io/DG7AR8YA8#/158488539_HOME",
-				link: "Explore the design",
+				{projecttitle:"Universidad del Pacifico",
+				projectdescription:"UX researcher in a project for one of the most important business schools in Peru. The problem: Find a tool to strengthen the relationship with its students and find a better way to communicate with them other than email.",
+				liveapp: "https://marvelapp.com/1e2556e",
+				link: "Play with the prototype",
 				},
 				{projecttitle:"Peru2021",
 				projectdescription:"UX Designer in a project with Peru 2021, helping them to reinforce their positioning as the referent in all things related with Social Responsibility and Sustainability.",
 				liveapp: "https://invis.io/D76A3ABKB#/133293341_HOME",
 				link: "Explore the design",
 				},
-				{projecttitle:"Quinta Miraflores Boutique Hotel",
+				{projecttitle:"ADEX",
+				projectdescription:"UX researcher and designer in a project with ADEX. The challenge: Unify the digital experience in all of the ADEX's different business units.",
+				liveapp: "https://invis.io/DG7AR8YA8#/158488539_HOME",
+				link: "Explore the design",
+				},
+				{projecttitle: "Wayra (WIP)",
+				projectdescription: "Helping some of the Wayra Startups on their UX Design process as they develop new releases of their products.",
+				liveapp: "data-toggle=modal data-target=#wayra",
+				linktomo:"Start ups",
+				modal: true,
+				modalId: "wayra",
+				modalcontent:"<p>Currently helping the following start ups on UX Design</p><br><ul><li><p><a herf='https://www.facebook.com/tumicrope/?fref=ts' target='blank'>Tu Micro</a></p></li><li><p><a href='https://itunes.apple.com/au/app/mapsalud-solucion-tecnologica/id1110061746?mt=8' target='blank'>Mapsalud</a></p></li><li><p><a href='http://www.restaurant.pe' target='blank'>Restaurant.pe</a></p></li></ul>"
+				}
+			]
+		},
+		{
+			title: "Web developer",
+			text: "I have developed websites using Squarespace and sometimes Ruby on Rails.",
+			projects: [
+			{projecttitle:"Quinta Miraflores Boutique Hotel",
 				projectdescription:"Web developer and Designer for the renewal of the website of this boutique hotel in the heart of Lima, Peru.",
 				liveapp: "http://www.quintamiraflores.com",
 				link: "Explore the web",
 				},
-				{projecttitle:"Kmimos",
-				projectdescription:"Project Manager and sometimes web developer to help this mexican startup validate their business model.",
-				liveapp: "https://www.kmimos.la",
-				link: "Go to the app",
+				{projecttitle: "Soulutions",
+				projectdescription: "Design and development of the company website.",
+				liveapp: "http://www.soulutions.com.pe",
+				link:"Explore the web"
+				},
+				{projecttitle: "Khalid CrossFit",
+				projectdescription: "Design and development of the website and digital strategy for the first CrossFit Box in Chiclayo",
+				liveapp: "http://www.khalidcrossfit.pe",
+				link:"Explore the web"
+				},
+				{projecttitle: "Lalogf.github.io",
+				projectdescription: "Constantly developing and changin this site, which was built using Handlebars and Backbone.",
+				liveapp: "/",
+				link:"Explore more"
+				},
+				{projecttitle: "Arte Aparte (WIP)",
+				projectdescription: "Ecommerce that will offer custom phone cases. Users will be able to create and buy their own phone cases. In this ocassion I will emphazise in Emojis! This app is being built in Ruby on Rails and it is using Culqi for processing payments.",
+				liveapp: "https://arteaparte.herokuapp.com/",
+				link:"Preview web"
 				}
-			],
-		},
-		{
-			title: "Banco de Credito -  BCP",
-			text: "Worked for over 5 years in the largest bank in Peru. Started as an intern and later worked as a Product Manager for different banking channels such as Online, Mobile, ATM and Kiosks.",
-			class: "vertical",
-			image: "assets/PreviewBCP.png",
+			
+			]
+		},{
+			title: "Product Manager",
+			text: "I worked for over 5 years in the largest bank in Peru. Started as an intern and later worked as a Product Manager for different banking channels such as Online, Mobile, ATM and Kiosks.",
 			projects: [
 			{
 				projecttitle:"Banca Movil",
@@ -159,41 +166,22 @@ function projects () {
 			},
 			{
 				projecttitle:"ATMs Navigation Menu",
-				projectdescription:"Project to improve the architecture information and the visual design of the ATM menus, in order to make them more friendly to the users and to promote their usage for transactions other than cash withdrawal."
+				projectdescription:"Project to improve the architecture information and the visual design of ATM's menus in order to make the ATMs more friendly to the users and to promote their usage for transactions other than cash withdrawal."
 			},
 			{
 				projecttitle:"Deposit ATMs",
-				projectdescription:"Ran the pilot in 10 BCP branches, worked closely with users, costumers and bank tellers, to get their feedback on how did they feel using this new ATMs. Later I managed the deployment of the Cash deposit ATMs nationwide."
+				projectdescription:"Ran the pilot in 10 BCP branches, worked closely with users, costumers and bank tellers to get their feedback on how they felt using this new kind of ATMs. Later I managed the deployment of the Cash deposit ATMs nationwide."
 			}
-			]
-		},
-		{
-			title: "General Assembly",
-			text: "Intense and challenging 12 week Full-Stack Web Development program, covering the best practices in front end and back end web development",
-			projects:[
-			{
-				projecttitle:"Zombie Survival Guide",
-				projectdescription:"Site that gives user information about secure places to hide in the case of a Zombie attack. It displays a  It also gives you options to buy survival kits. Built in Ruby on Rails, using MapBox and Foursquare APIs, and Rspec and Capybara for testing.",
-				link:"Explore",
-				liveapp:"http://peru-compare.herokuapp.com",
-				size:2,
-				github: "http://github.com/lalogf/plan"
-			},
-			{
-				projecttitle:"Plan Compare",
-				projectdescription:"Site that allows users to choose their best option when buying or renewing a smartphone. It compares plans based on prices, amount of data and SMS and minutes offered by the mobile carriers. Built in Node.js, using Sequelizejs, Expressjs, Passport and Bcrypt.",
-				liveapp:"http://zombiesurvivalguide.herokuapp.com/",	
-				link:"Explore",
-				size:2,
-				github:"https://github.com/lalogf/zombielist"
-			},
-			]
-		}]
+			],
+		}
+		]
 	});
 
 	$("#container").html(content);
 	$("#projectsButton").css("background-color", "yellow");
+	$(".navbar-brand p strong").html("EXPERIENCE");
 	resizeBoxes();
+	mixpanel.track("Entro a experience");
 }
 
 function extras () {
@@ -202,11 +190,12 @@ function extras () {
 	});
 	$("#container").html(content);
 	$("#extrasButton").css("background-color", "yellow");
+	$(".navbar-brand p strong").html("EXTRAS");
 }
 
 function wiwo () {
 	var content = wiwoTemplate({
-		title: "What I'm Working on",
+		title:"What I'm Working On",
 		wiwo: [
 		{
 			title: "Arte Aparte",
@@ -238,7 +227,9 @@ function wiwo () {
 	});
 	$("#container").html(content);
 	$("#wiwoButton").css("background-color", "yellow");
+	$(".navbar-brand p strong").html("What I'm Working On");
 	departamentos();
+	mixpanel.track("Entro a wiwo");
 }
 
 function blog () {
@@ -255,6 +246,8 @@ function contact () {
 	});
 	$("#container").html(content);
 	$("#contactButton").css("background-color", "yellow");
+	$(".navbar-brand p strong").html("Contact");
+	mixpanel.track("Entro a contact");
 }
 
 var departamentos = function (){
@@ -318,7 +311,7 @@ var departamentos = function (){
 
 router.on("route:index", index);
 router.on("route:about", about);
-router.on("route:projects", projects);
+router.on("route:experience", experience);
 router.on("route:extras", extras);
 router.on("route:wiwo", wiwo);
 router.on("route:blog", blog);
