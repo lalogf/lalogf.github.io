@@ -52,11 +52,6 @@ var ready = function () {
 	}
 	resizeBoxes();
 
-	function resize(){
-		$(window).resize(function(){location.reload();});
-	}
-
-	resize();
 };
 
 $(document).ready(ready);
