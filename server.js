@@ -86,7 +86,6 @@ function about (){
 	if($(window).width() > 768 && $(window).width()> $(window).height()){
 		resizeBoxes();
 	};
-	$(window).resize(function(){location.reload();});
 };
 
 function experience () {

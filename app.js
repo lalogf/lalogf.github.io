@@ -51,6 +51,12 @@ var ready = function () {
 		$(".contentBox2").css("height",newsize);
 	}
 	resizeBoxes();
+
+	function resize(){
+		$(window).resize(function(){location.reload();});
+	}
+
+	resize();
 };
 
 $(document).ready(ready);
