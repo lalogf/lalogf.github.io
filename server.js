@@ -22,7 +22,7 @@ var contactTemplate;
 		$(".contentBox2").each(function(){newarray.push($(this).css("height").split("px")[0])});
 		var newsize = Math.max.apply(Math,newarray);
 		$(".contentBox2").css("height",newsize);
-	}
+	};
 
 
 var Router = Backbone.Router.extend({
@@ -82,8 +82,11 @@ function about (){
 	$("#container").html(content);
 	$("#aboutButton").css("background-color", "yellow");
 	$(".navbar-brand p strong").html("ABOUT ME");
-	resizeBoxes();
 	mixpanel.track("Entro a about");
+	if($(window).width() > 768 && $(window).width()> $(window).height()){
+		resizeBoxes();
+	};
+	$(window).resize(function(){location.reload();});
 };
 
 function experience () {

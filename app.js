@@ -33,20 +33,6 @@ var ready = function () {
 	changeColor();
 
 
-	hideControls = function () {
-		var theWindow = $(window);
-		theWindow.resize(function() {
-			resizeBoxes();
-			if (theWindow.innerWidth() < 600){
-				$(".controls").hide();
-			} else {
-				$(".controls").show();
-			}
-		});	
-	};
-
-	hideControls();
-
 	$('.nav a').on('click', function(){
 		$(".btn-navbar").click(); 
 		$(".navbar-toggle").click() 
@@ -58,7 +44,7 @@ var ready = function () {
 
 	function resizeBoxes(){
 		var boxHeight = $(".titleBox").css("height");
-		$(".contentBox").css("height", boxHeight);
+		// $(".contentBox").css("height", boxHeight);
 		var newarray = [];
 		$(".contentBox2").each(function(){newarray.push($(this).css("height").split("px")[0])});
 		var newsize = Math.max.apply(Math,newarray);
