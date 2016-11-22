@@ -145,7 +145,7 @@ function experience () {
 				link:"Explore the web"
 				},
 				{projecttitle: "Lalogf.github.io",
-				projectdescription: "Constantly developing and changin this site, which was built using Handlebars and Backbone.",
+				projectdescription: "Constantly developing and updating this site, which was built using Handlebars and Backbone.",
 				liveapp: "/",
 				link:"Explore more"
 				},
