@@ -71,10 +71,10 @@ function index () {
 function about (){
 	var content = aboutTemplate({
 		title: "About",
-		intro: "I'm a UX Designer, Marketer and Web Developer, who enjoys building usable and enjoyable stuff for the Internet age.",
+		intro: "I'm a UX Designer and Web Developer, who enjoys to ideate and build digital products.",
 		items: 
-		[{  title: "UX Designer - Marketing",
-		text: "I have over 8 years of experience in Product Managment and UX Design. During this period, I have helped organizations and businesses of all sizes to craft better digital products. I have participated in the planning and design of the most downloaded and used Mobile Banking app in Peru. I have helped a NGO that defends Human Rigths in the Digital field."},
+		[{  title: "UX Designer",
+		text: "I have over 8 years of experience in Product Managment and UX Design. During this period, I have helped organizations and businesses of all sizes to craft better digital products. I have participated in the planning and design of the most downloaded and used Mobile Banking app in Peru."},
 		{ 	title: "Web Developer",
 		text: "I can code in Ruby, Javascript, HTML and CSS. I experienced working with frameworks such as: Ruby on Rails, Nodejs, Sequelize, Express, Handlebars and Backbone. I normally use Postgresql as DB and Passport/Bcrypt or Devise for authentication. I have deployed to Heroku and AWS. I was trained at General Assembly in San Francisco, CA and I'm sharping my skills at Onemonth.com."}
 		]
@@ -95,33 +95,31 @@ function experience () {
 			title:"UX Designer",
 			text: "I have worked as a researcher, designer and consultant on digital projects for established companies and startups. ",
 			projects:[
-				{projecttitle:"Cienciactiva",
-				projectdescription:"UX researcher and Designer in a project for a government entity that gives funds and opportunities in R&D to peruvian scientists. The challenge: How might we engage more peruvian scientists with the opportunities that Cienciactiva offers.",
-				liveapp: "http://www.cienciactiva.gob.pe/",
-				link: "Explore the web",
-				},
+				{projecttitle:"Mapsalud",
+				projectdescription:"UX advisor in a project for an app that shows the coverage and policies for the multiple private, personal and labor,  insurances that a person can have.",
+				liveapp: "https://itunes.apple.com/us/app/mapsalud-tu-plan-de-salud/id1190321513?l=es&ls=1&mt=8",
+				link: "Download the app",
+				}, 
 				{projecttitle:"Universidad del Pacifico",
 				projectdescription:"UX researcher in a project for one of the most important business schools in Peru. The problem: Find a tool to strengthen the relationship with its students and find a better way to communicate with them other than email.",
 				liveapp: "https://marvelapp.com/1e2556e",
 				link: "Play with the prototype",
 				},
-				{projecttitle:"Peru2021",
-				projectdescription:"UX Designer in a project with Peru 2021, helping them to reinforce their positioning as the referent in all things related with Social Responsibility and Sustainability.",
-				liveapp: "https://invis.io/D76A3ABKB#/133293341_HOME",
-				link: "Explore the design",
-				},
+				{projecttitle:"Cienciactiva",
+				projectdescription:"UX researcher and Designer in a project for a government entity that gives funds and opportunities in R&D to peruvian scientists. The challenge: How might we engage more peruvian scientists with the opportunities that Cienciactiva offers.",
+				liveapp: "http://www.cienciactiva.gob.pe/",
+				link: "Explore the web",
+				}
+				,
+				// {projecttitle:"Peru2021",
+				// projectdescription:"UX Designer in a project with Peru 2021, helping them to reinforce their positioning as the referent in all things related with Social Responsibility and Sustainability.",
+				// liveapp: "https://invis.io/D76A3ABKB#/133293341_HOME",
+				// link: "Explore the design",
+				// },
 				{projecttitle:"ADEX",
 				projectdescription:"UX researcher and designer in a project with ADEX. The challenge: Unify the digital experience in all of the ADEX's different business units.",
 				liveapp: "https://invis.io/DG7AR8YA8#/158488539_HOME",
 				link: "Explore the design",
-				},
-				{projecttitle: "Wayra (WIP)",
-				projectdescription: "Helping some of the Wayra Startups on their UX Design process as they develop new releases of their products.",
-				liveapp: "data-toggle=modal data-target=#wayra",
-				linktomo:"Start ups",
-				modal: true,
-				modalId: "wayra",
-				modalcontent:"<p>Currently helping the following start ups on UX Design</p><br><ul><li><p><a herf='https://www.facebook.com/tumicrope/?fref=ts' target='blank'>Tu Micro</a></p></li><li><p><a href='https://itunes.apple.com/au/app/mapsalud-solucion-tecnologica/id1110061746?mt=8' target='blank'>Mapsalud</a></p></li><li><p><a href='http://www.restaurant.pe' target='blank'>Restaurant.pe</a></p></li></ul>"
 				}
 			]
 		},
@@ -129,7 +127,11 @@ function experience () {
 			title: "Web developer",
 			text: "I have developed websites using Squarespace and sometimes Ruby on Rails.",
 			projects: [
-			{projecttitle:"Quinta Miraflores Boutique Hotel",
+			{projecttitle:"Michael Daigian Design (WIP)",
+				projectdescription:"Web developer for a wedding and event designer website in San Francisco.",
+				liveapp: "https://adam-daigian.squarespace.com",
+				link: "Explore the web",
+				},{projecttitle:"Quinta Miraflores Boutique Hotel",
 				projectdescription:"Web developer and Designer for the renewal of the website of this boutique hotel in the heart of Lima, Peru.",
 				liveapp: "http://www.quintamiraflores.com",
 				link: "Explore the web",
@@ -139,19 +141,19 @@ function experience () {
 				liveapp: "http://www.soulutions.com.pe",
 				link:"Explore the web"
 				},
-				{projecttitle: "Khalid CrossFit",
-				projectdescription: "Design and development of the website and digital strategy for the first CrossFit Box in Chiclayo",
-				liveapp: "http://www.khalidcrossfit.pe",
-				link:"Explore the web"
-				},
-				{projecttitle: "Lalogf.github.io",
-				projectdescription: "Constantly developing and updating this site, which was built using Handlebars and Backbone.",
-				liveapp: "/",
-				link:"Explore more"
-				},
+				// {projecttitle: "Khalid CrossFit",
+				// projectdescription: "Design and development of the website and digital strategy for the first CrossFit Box in Chiclayo",
+				// liveapp: "http://www.khalidcrossfit.pe",
+				// link:"Explore the web"
+				// },
+				// {projecttitle: "Lalogf.github.io",
+				// projectdescription: "Constantly developing and updating this site, built using Handlebars and Backbone.",
+				// liveapp: "/",
+				// link:"Explore more"
+				// },
 				{projecttitle: "Arte Aparte (WIP)",
 				projectdescription: "Ecommerce that will offer custom phone cases. Users will be able to create and buy their own phone cases. In this ocassion I will emphazise in Emojis! This app is being built in Ruby on Rails and it is using Culqi for processing payments.",
-				liveapp: "https://arteaparte.herokuapp.com/",
+				liveapp: "https://arteaparte.pe/",
 				link:"Preview web"
 				}
 			
@@ -202,7 +204,7 @@ function wiwo () {
 		{
 			title: "Arte Aparte",
 			text: "Ecommerce that will offer custom phone cases. Users will be able to create and buy their own phone cases. In this ocassion I will emphazise in Emojis! This app is being built in Ruby on Rails and it is using Culqi for processing payments.",
-			link: "href=https://arteaparte.herokuapp.com/crea-tu-case/new target=blank",
+			link: "href=https://arteaparte.pe/crea-tu-case/new target=blank",
 			button: "Live App - Dev Mode",
 			modal: false,
 			modalId: "screenshotModal",
