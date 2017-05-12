@@ -127,9 +127,9 @@ function experience () {
 			title: "Web developer",
 			text: "I have developed websites using Squarespace and sometimes Ruby on Rails.",
 			projects: [
-			{projecttitle:"Michael Daigian Design (WIP)",
+			{projecttitle:"Michael Daigian Design",
 				projectdescription:"Web developer for a wedding and event designer website in San Francisco.",
-				liveapp: "https://adam-daigian.squarespace.com",
+				liveapp: "http://www.michaeldaigian.com/",
 				link: "Explore the web",
 				},{projecttitle:"Quinta Miraflores Boutique Hotel",
 				projectdescription:"Web developer and Designer for the renewal of the website of this boutique hotel in the heart of Lima, Peru.",
